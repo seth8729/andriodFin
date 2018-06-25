@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">數獨</string>
+    <string name="one">１</string>
+    <string name="two">２</string>
+    <string name="three">３</string>
+    <string name="four">４</string>
+    <string name="five">５</string>
+    <string name="six">６</string>
+    <string name="seven">７</string>
+    <string name="eight">８</string>
+    <string name="nine">９</string>
+    <string name="Tip">提示</string>
+    <string name="reset">重新</string>
+    <string name="clean">清除</string>
+
+</resources>
