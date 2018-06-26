@@ -459,7 +459,7 @@ public class MainActivity extends AppCompatActivity {
             mBtnEx7.setBackgroundColor(getResources().getColor(R.color.colorWhite));
             mBtnEx8.setBackgroundColor(getResources().getColor(R.color.colorWhite));
             mBtnEx9.setBackgroundColor(getResources().getColor(R.color.colorWhite));
-            currentNumber = "";
+            currentNumber = "　";
         }
     };
     private View.OnClickListener mBtnResetOnClick = new View.OnClickListener() {
@@ -801,7 +801,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             boolean win = true;
-            if(board[0][0] == "　") {
+            if(board[0][0].equals("　")) {
                 mBtn1.setText(currentNumber);
                 temp[0][0] = currentNumber;
                 for(int i =0; i < 9; i++){
@@ -817,6 +817,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn1.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　"))  mBtn1.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
                     for(int i = 0;i < 9;i++){
                         for(int j = 0;j < 9;j++){
@@ -838,7 +839,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             boolean win = true;
-            if(board[0][1] == "　") {
+            if(board[0][1].equals("　")) {
                 mBtn2.setText(currentNumber);
                 temp[0][1] = currentNumber;
                 for (int i = 0; i < 9; i++) {
@@ -854,7 +855,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn2.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　"))  mBtn2.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -866,7 +875,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[0][2] == "　") {
+            if(board[0][2].equals("　")) {
                 mBtn3.setText(currentNumber);
                 temp[0][2] = currentNumber;
                 boolean win = true;
@@ -883,7 +892,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn3.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　"))  mBtn3.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -896,7 +913,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[0][3] == "　") {
+            if(board[0][3].equals("　")) {
                 mBtn4.setText(currentNumber);
                 temp[0][3] = currentNumber;
                 boolean win = true;
@@ -913,7 +930,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn4.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　"))  mBtn4.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -925,7 +950,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[0][4] == "　") {
+            if(board[0][4].equals("　")) {
                 mBtn5.setText(currentNumber);
                 temp[0][4] = currentNumber;
                 boolean win = true;
@@ -942,7 +967,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn5.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn5.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -954,7 +987,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[0][5] == "　") {
+            if(board[0][5].equals("　")) {
                 mBtn6.setText(currentNumber);
                 temp[0][5] = currentNumber;
                 boolean win = true;
@@ -971,7 +1004,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn6.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn6.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -983,7 +1024,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[0][6] == "　") {
+            if(board[0][6].equals("　")) {
                 mBtn7.setText(currentNumber);
                 temp[0][6] = currentNumber;
                 boolean win = true;
@@ -1000,7 +1041,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn7.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn7.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1013,7 +1062,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[0][7] == "　") {
+            if(board[0][7].equals("　")) {
                 mBtn8.setText(currentNumber);
                 temp[0][7] = currentNumber;
                 boolean win = true;
@@ -1030,7 +1079,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn8.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn8.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1043,7 +1100,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if (board[0][8] == "　") {
+            if (board[0][8].equals("　")) {
                 mBtn9.setText(currentNumber);
                 temp[0][8] = currentNumber;
                 boolean win = true;
@@ -1058,8 +1115,16 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     } else mBtn9.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
-                if (win && Arrays.equals(temp, answer)) {
-                    if (win) {
+                if(currentNumber.equals("　")) mBtn9.setTextColor(getResources().getColor(R.color.colorBlack));
+                if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
+                    if(win){
                         Win();
                     }
                 }
@@ -1072,7 +1137,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             boolean win = true;
-            if(board[1][0] == "　") {
+            if(board[1][0].equals("　")) {
                 mBtn11.setText(currentNumber);
                 temp[1][0] = currentNumber;
                 for(int i =0; i < 9; i++){
@@ -1088,7 +1153,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn11.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn11.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1102,7 +1175,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             boolean win = true;
-            if(board[1][1] == "　") {
+            if(board[1][1].equals("　")) {
                 mBtn12.setText(currentNumber);
                 temp[1][1] = currentNumber;
                 for (int i = 0; i < 9; i++) {
@@ -1118,7 +1191,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn12.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn12.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1130,7 +1211,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[1][2] == "　") {
+            if(board[1][2].equals("　")) {
                 mBtn13.setText(currentNumber);
                 temp[1][2] = currentNumber;
                 boolean win = true;
@@ -1147,7 +1228,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn13.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn7.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1160,7 +1249,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[1][3] == "　") {
+            if(board[1][3].equals("　")) {
                 mBtn14.setText(currentNumber);
                 temp[1][3] = currentNumber;
                 boolean win = true;
@@ -1177,7 +1266,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn14.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn14.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1189,7 +1286,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[1][4] == "　") {
+            if(board[1][4].equals("　")) {
                 mBtn15.setText(currentNumber);
                 temp[1][4] = currentNumber;
                 boolean win = true;
@@ -1206,7 +1303,16 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn15.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn15.setTextColor(getResources().getColor(R.color.colorWhite));
+
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1218,7 +1324,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[1][5] == "　") {
+            if(board[1][5].equals("　")) {
                 mBtn16.setText(currentNumber);
                 temp[1][5] = currentNumber;
                 boolean win = true;
@@ -1235,7 +1341,16 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn16.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn16.setTextColor(getResources().getColor(R.color.colorWhite));
+
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1247,7 +1362,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[1][6] == "　") {
+            if(board[1][6].equals("　")) {
                 mBtn17.setText(currentNumber);
                 temp[1][6] = currentNumber;
                 boolean win = true;
@@ -1264,7 +1379,16 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn17.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn17.setTextColor(getResources().getColor(R.color.colorBlack));
+
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1277,7 +1401,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[1][7] == "　") {
+            if(board[1][7].equals("　")) {
                 mBtn18.setText(currentNumber);
                 temp[1][7] = currentNumber;
                 boolean win = true;
@@ -1294,7 +1418,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn18.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn18.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1307,7 +1439,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[1][8] == "　") {
+            if(board[1][8].equals("　")) {
                 mBtn19.setText(currentNumber);
                 temp[1][8] = currentNumber;
                 boolean win = true;
@@ -1324,7 +1456,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn19.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　"))mBtn19.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1338,7 +1478,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             boolean win = true;
-            if(board[2][0] == "　") {
+            if(board[2][0].equals("　")) {
                 mBtn21.setText(currentNumber);
                 temp[2][0] = currentNumber;
                 for(int i =0; i < 9; i++){
@@ -1354,7 +1494,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn21.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　"))mBtn21.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1368,7 +1516,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             boolean win = true;
-            if(board[2][1] == "　") {
+            if(board[2][1].equals("　")) {
                 mBtn22.setText(currentNumber);
                 temp[2][1] = currentNumber;
                 for (int i = 0; i < 9; i++) {
@@ -1384,7 +1532,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn22.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　"))mBtn22.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1396,7 +1552,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[2][2] == "　") {
+            if(board[2][2].equals("　")) {
                 mBtn23.setText(currentNumber);
                 temp[2][2] = currentNumber;
                 boolean win = true;
@@ -1413,7 +1569,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn23.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn23.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1426,7 +1590,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[2][3] == "　") {
+            if(board[2][3].equals("　")) {
                 mBtn24.setText(currentNumber);
                 temp[2][3] = currentNumber;
                 boolean win = true;
@@ -1443,7 +1607,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn24.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn24.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1455,7 +1627,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[2][4] == "　") {
+            if(board[2][4].equals("　")) {
                 mBtn25.setText(currentNumber);
                 temp[2][4] = currentNumber;
                 boolean win = true;
@@ -1472,7 +1644,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn25.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　"))mBtn25.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1484,7 +1664,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[2][5] == "　") {
+            if(board[2][5].equals("　")) {
                 mBtn26.setText(currentNumber);
                 temp[2][5] = currentNumber;
                 boolean win = true;
@@ -1501,7 +1681,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn26.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　"))mBtn26.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1513,7 +1701,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[2][6] == "　") {
+            if(board[2][6].equals("　")) {
                 mBtn27.setText(currentNumber);
                 temp[2][6] = currentNumber;
                 boolean win = true;
@@ -1530,7 +1718,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn27.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　"))mBtn27.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1543,7 +1739,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[2][7] == "　") {
+            if(board[2][7].equals("　")) {
                 mBtn28.setText(currentNumber);
                 temp[2][7] = currentNumber;
                 boolean win = true;
@@ -1560,7 +1756,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn28.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　"))mBtn28.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1573,7 +1777,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[2][8] == "　") {
+            if(board[2][8].equals("　")) {
                 mBtn29.setText(currentNumber);
                 temp[2][8] = currentNumber;
                 boolean win = true;
@@ -1590,7 +1794,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn29.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　"))mBtn29.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1604,7 +1816,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             boolean win = true;
-            if(board[3][0] == "　") {
+            if(board[3][0].equals("　")) {
                 mBtn31.setText(currentNumber);
                 temp[3][0] = currentNumber;
                 for(int i =0; i < 9; i++){
@@ -1620,7 +1832,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn31.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn31.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1634,7 +1854,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             boolean win = true;
-            if(board[3][1] == "　") {
+            if(board[3][1].equals("　")) {
                 mBtn32.setText(currentNumber);
                 temp[3][1] = currentNumber;
                 for (int i = 0; i < 9; i++) {
@@ -1650,7 +1870,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn32.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn32.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1662,7 +1890,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[3][2] == "　") {
+            if(board[3][2].equals("　")) {
                 mBtn33.setText(currentNumber);
                 temp[3][2] = currentNumber;
                 boolean win = true;
@@ -1679,7 +1907,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn33.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn33.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1692,7 +1928,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[3][3] == "　") {
+            if(board[3][3].equals("　")) {
                 mBtn34.setText(currentNumber);
                 temp[3][3] = currentNumber;
                 boolean win = true;
@@ -1709,7 +1945,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn34.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn34.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1721,7 +1965,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[3][4] == "　") {
+            if(board[3][4].equals("　")) {
                 mBtn35.setText(currentNumber);
                 temp[3][4] = currentNumber;
                 boolean win = true;
@@ -1738,7 +1982,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn35.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn35.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1750,7 +2002,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[3][5] == "　") {
+            if(board[3][5].equals("　")) {
                 mBtn36.setText(currentNumber);
                 temp[3][5] = currentNumber;
                 boolean win = true;
@@ -1767,7 +2019,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn36.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn36.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1779,7 +2039,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[3][6] == "　") {
+            if(board[3][6].equals("　")) {
                 mBtn37.setText(currentNumber);
                 temp[3][6] = currentNumber;
                 boolean win = true;
@@ -1796,7 +2056,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn37.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn37.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1809,7 +2077,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[3][7] == "　") {
+            if(board[3][7].equals("　")) {
                 mBtn38.setText(currentNumber);
                 temp[3][7] = currentNumber;
                 boolean win = true;
@@ -1826,7 +2094,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn38.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn38.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1839,7 +2115,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[3][8] == "　") {
+            if(board[3][8].equals("　")) {
                 mBtn39.setText(currentNumber);
                 temp[3][8] = currentNumber;
                 boolean win = true;
@@ -1856,7 +2132,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn39.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn39.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1870,7 +2154,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             boolean win = true;
-            if(board[4][0] == "　") {
+            if(board[4][0].equals("　")) {
                 mBtn41.setText(currentNumber);
                 temp[4][0] = currentNumber;
                 for(int i =0; i < 9; i++){
@@ -1886,7 +2170,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn41.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn41.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1900,7 +2192,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             boolean win = true;
-            if(board[4][1] == "　") {
+            if(board[4][1].equals("　")) {
                 mBtn42.setText(currentNumber);
                 temp[4][1] = currentNumber;
                 for (int i = 0; i < 9; i++) {
@@ -1916,7 +2208,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn42.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn42.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1928,7 +2228,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[4][2] == "　") {
+            if(board[4][2].equals("　")) {
                 mBtn43.setText(currentNumber);
                 temp[4][2] = currentNumber;
                 boolean win = true;
@@ -1945,7 +2245,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn43.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn43.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1958,7 +2266,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[4][3] == "　") {
+            if(board[4][3].equals("　")) {
                 mBtn44.setText(currentNumber);
                 temp[4][3] = currentNumber;
                 boolean win = true;
@@ -1975,7 +2283,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn44.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn44.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -1987,7 +2303,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[4][4] == "　") {
+            if(board[4][4].equals("　")) {
                 mBtn45.setText(currentNumber);
                 temp[4][4] = currentNumber;
                 boolean win = true;
@@ -2004,7 +2320,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn45.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn45.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2016,7 +2340,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[4][5] == "　") {
+            if(board[4][5].equals("　")) {
                 mBtn46.setText(currentNumber);
                 temp[4][5] = currentNumber;
                 boolean win = true;
@@ -2033,7 +2357,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn46.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn46.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2045,7 +2377,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[4][6] == "　") {
+            if(board[4][6].equals("　")) {
                 mBtn47.setText(currentNumber);
                 temp[4][6] = currentNumber;
                 boolean win = true;
@@ -2062,7 +2394,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn47.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn47.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2075,7 +2415,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[4][7] == "　") {
+            if(board[4][7].equals("　")) {
                 mBtn48.setText(currentNumber);
                 temp[4][7] = currentNumber;
                 boolean win = true;
@@ -2092,7 +2432,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn48.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn48.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2105,7 +2453,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[4][8] == "　") {
+            if(board[4][8].equals("　")) {
                 mBtn49.setText(currentNumber);
                 temp[4][8] = currentNumber;
                 boolean win = true;
@@ -2122,7 +2470,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn49.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn49.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2136,7 +2492,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             boolean win = true;
-            if(board[5][0] == "　") {
+            if(board[5][0].equals("　")) {
                 mBtn51.setText(currentNumber);
                 temp[5][0] = currentNumber;
                 for(int i =0; i < 9; i++){
@@ -2152,7 +2508,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn51.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn51.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2166,7 +2530,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             boolean win = true;
-            if(board[5][1] == "　") {
+            if(board[5][1].equals("　")) {
                 mBtn52.setText(currentNumber);
                 temp[5][1] = currentNumber;
                 for (int i = 0; i < 9; i++) {
@@ -2182,7 +2546,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn52.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn52.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2194,7 +2566,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[5][2] == "　") {
+            if(board[5][2].equals("　")) {
                 mBtn53.setText(currentNumber);
                 temp[5][2] = currentNumber;
                 boolean win = true;
@@ -2211,7 +2583,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn53.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn53.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2224,7 +2604,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[5][3] == "　") {
+            if(board[5][3].equals("　")) {
                 mBtn54.setText(currentNumber);
                 temp[5][3] = currentNumber;
                 boolean win = true;
@@ -2241,7 +2621,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn54.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn54.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2253,7 +2641,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[5][4] == "　") {
+            if(board[5][4].equals("　")) {
                 mBtn55.setText(currentNumber);
                 temp[5][4] = currentNumber;
                 boolean win = true;
@@ -2270,7 +2658,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn55.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn55.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2282,7 +2678,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[5][5] == "　") {
+            if(board[5][5].equals("　")) {
                 mBtn56.setText(currentNumber);
                 temp[5][5] = currentNumber;
                 boolean win = true;
@@ -2299,7 +2695,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn56.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn56.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2311,7 +2715,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[5][6] == "　") {
+            if(board[5][6].equals("　")) {
                 mBtn57.setText(currentNumber);
                 temp[5][6] = currentNumber;
                 boolean win = true;
@@ -2328,7 +2732,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn57.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn57.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2341,7 +2753,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[5][7] == "　") {
+            if(board[5][7].equals("　")) {
                 mBtn58.setText(currentNumber);
                 temp[5][7] = currentNumber;
                 boolean win = true;
@@ -2358,7 +2770,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn58.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn58.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2371,7 +2791,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[5][8] == "　") {
+            if(board[5][8].equals("　")) {
                 mBtn59.setText(currentNumber);
                 temp[5][8] = currentNumber;
                 boolean win = true;
@@ -2388,7 +2808,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn59.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn59.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2402,7 +2830,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             boolean win = true;
-            if(board[6][0] == "　") {
+            if(board[6][0].equals("　")) {
                 mBtn61.setText(currentNumber);
                 temp[6][0] = currentNumber;
                 for(int i =0; i < 9; i++){
@@ -2418,7 +2846,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn61.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn61.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2432,7 +2868,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             boolean win = true;
-            if(board[6][1] == "　") {
+            if(board[6][1].equals("　")) {
                 mBtn62.setText(currentNumber);
                 temp[6][1] = currentNumber;
                 for (int i = 0; i < 9; i++) {
@@ -2448,7 +2884,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn62.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn62.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2460,7 +2904,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[6][2] == "　") {
+            if(board[6][2].equals("　")) {
                 mBtn63.setText(currentNumber);
                 temp[6][2] = currentNumber;
                 boolean win = true;
@@ -2477,7 +2921,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn63.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn63.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2490,7 +2942,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[6][3] == "　") {
+            if(board[6][3].equals("　")) {
                 mBtn64.setText(currentNumber);
                 temp[6][3] = currentNumber;
                 boolean win = true;
@@ -2507,7 +2959,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn64.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn64.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2519,7 +2979,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[6][4] == "　") {
+            if(board[6][4].equals("　")) {
                 mBtn65.setText(currentNumber);
                 temp[6][4] = currentNumber;
                 boolean win = true;
@@ -2536,7 +2996,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn65.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn65.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2548,7 +3016,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[6][5] == "　") {
+            if(board[6][5].equals("　")) {
                 mBtn66.setText(currentNumber);
                 temp[6][5] = currentNumber;
                 boolean win = true;
@@ -2565,7 +3033,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn66.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn66.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2577,7 +3053,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[6][6] == "　") {
+            if(board[6][6].equals("　")) {
                 mBtn67.setText(currentNumber);
                 temp[6][6] = currentNumber;
                 boolean win = true;
@@ -2594,7 +3070,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn67.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn67.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2607,7 +3091,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[6][7] == "　") {
+            if(board[6][7].equals("　")) {
                 mBtn68.setText(currentNumber);
                 temp[6][7] = currentNumber;
                 boolean win = true;
@@ -2624,7 +3108,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn68.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn68.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2637,7 +3129,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[6][8] == "　") {
+            if(board[6][8].equals("　")) {
                 mBtn69.setText(currentNumber);
                 temp[6][8] = currentNumber;
                 boolean win = true;
@@ -2654,7 +3146,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn69.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn69.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2668,7 +3168,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             boolean win = true;
-            if(board[7][0] == "　") {
+            if(board[7][0].equals("　")) {
                 mBtn71.setText(currentNumber);
                 temp[7][0] = currentNumber;
                 for(int i =0; i < 9; i++){
@@ -2684,7 +3184,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn71.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn71.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2698,7 +3206,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             boolean win = true;
-            if(board[7][1] == "　") {
+            if(board[7][1].equals("　")) {
                 mBtn72.setText(currentNumber);
                 temp[7][1] = currentNumber;
                 for (int i = 0; i < 9; i++) {
@@ -2714,7 +3222,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn72.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn72.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2726,7 +3242,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[7][2] == "　") {
+            if(board[7][2].equals("　")) {
                 mBtn73.setText(currentNumber);
                 temp[7][2] = currentNumber;
                 boolean win = true;
@@ -2743,7 +3259,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn73.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn73.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2756,7 +3280,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[7][3] == "　") {
+            if(board[7][3].equals("　")) {
                 mBtn74.setText(currentNumber);
                 temp[7][3] = currentNumber;
                 boolean win = true;
@@ -2773,7 +3297,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn74.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn74.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2785,7 +3317,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[7][4] == "　") {
+            if(board[7][4].equals("　")) {
                 mBtn75.setText(currentNumber);
                 temp[7][4] = currentNumber;
                 boolean win = true;
@@ -2802,7 +3334,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn75.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn75.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2814,7 +3354,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[7][5] == "　") {
+            if(board[7][5].equals("　")) {
                 mBtn76.setText(currentNumber);
                 temp[7][5] = currentNumber;
                 boolean win = true;
@@ -2831,7 +3371,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn76.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn76.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2843,7 +3391,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[7][6] == "　") {
+            if(board[7][6].equals("　")) {
                 mBtn77.setText(currentNumber);
                 temp[7][6] = currentNumber;
                 boolean win = true;
@@ -2860,7 +3408,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn77.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn77.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2873,7 +3429,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[7][7] == "　") {
+            if(board[7][7].equals("　")) {
                 mBtn78.setText(currentNumber);
                 temp[7][7] = currentNumber;
                 boolean win = true;
@@ -2890,7 +3446,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn78.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn78.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2903,7 +3467,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[7][8] == "　") {
+            if(board[7][8].equals("　")) {
                 mBtn79.setText(currentNumber);
                 temp[7][8] = currentNumber;
                 boolean win = true;
@@ -2920,7 +3484,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn79.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn79.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2934,7 +3506,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             boolean win = true;
-            if(board[8][0] == "　") {
+            if(board[8][0].equals("　")) {
                 mBtn81.setText(currentNumber);
                 temp[8][0] = currentNumber;
                 for(int i =0; i < 9; i++){
@@ -2950,7 +3522,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn81.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn81.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2964,7 +3544,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             boolean win = true;
-            if(board[8][1] == "　") {
+            if(board[8][1].equals("　")) {
                 mBtn82.setText(currentNumber);
                 temp[8][1] = currentNumber;
                 for (int i = 0; i < 9; i++) {
@@ -2980,7 +3560,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn82.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn82.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -2992,7 +3580,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[8][2] == "　") {
+            if(board[8][2].equals("　")) {
                 mBtn83.setText(currentNumber);
                 temp[8][2] = currentNumber;
                 boolean win = true;
@@ -3009,7 +3597,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn83.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn83.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -3022,7 +3618,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[8][3] == "　") {
+            if(board[8][3].equals("　")) {
                 mBtn84.setText(currentNumber);
                 temp[8][3] = currentNumber;
                 boolean win = true;
@@ -3039,7 +3635,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn84.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn84.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -3051,7 +3655,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[8][4] == "　") {
+            if(board[8][4].equals("　")) {
                 mBtn85.setText(currentNumber);
                 temp[8][4] = currentNumber;
                 boolean win = true;
@@ -3068,7 +3672,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn85.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn85.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -3080,7 +3692,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[8][5] == "　") {
+            if(board[8][5].equals("　")) {
                 mBtn86.setText(currentNumber);
                 temp[8][5] = currentNumber;
                 boolean win = true;
@@ -3097,7 +3709,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn86.setTextColor(getResources().getColor(R.color.colorWhite));
                 }
+                if(currentNumber.equals("　")) mBtn86.setTextColor(getResources().getColor(R.color.colorWhite));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -3109,7 +3729,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[8][6] == "　") {
+            if(board[8][6].equals("　")) {
                 mBtn87.setText(currentNumber);
                 temp[8][6] = currentNumber;
                 boolean win = true;
@@ -3126,7 +3746,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn87.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn87.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -3139,7 +3767,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[8][7] == "　") {
+            if(board[8][7].equals("　")) {
                 mBtn88.setText(currentNumber);
                 temp[8][7] = currentNumber;
                 boolean win = true;
@@ -3156,7 +3784,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn88.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn88.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
@@ -3169,7 +3805,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            if(board[8][8] == "　") {
+            if(board[8][8].equals("　")) {
                 mBtn89.setText(currentNumber);
                 temp[8][8] = currentNumber;
                 boolean win = true;
@@ -3186,7 +3822,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else mBtn89.setTextColor(getResources().getColor(R.color.colorBlack));
                 }
+                if(currentNumber.equals("　")) mBtn89.setTextColor(getResources().getColor(R.color.colorBlack));
                 if(win) {
+                    for(int i = 0;i < 9;i++){
+                        for(int j = 0;j < 9;j++){
+                            if(!temp[i][j].equals(answer[i][j])){
+                                win = false;
+                            }
+                        }
+                    }
                     if(win){
                         Win();
                     }
